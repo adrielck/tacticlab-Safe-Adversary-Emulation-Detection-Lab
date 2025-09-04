@@ -1,0 +1,24 @@
+id: SC-INIT-001
+name: Initial Access via Phishing (Simulated)
+description: Simula cadeia de eventos de phishing (abertura de anexo/Link) sem executar nada real.
+host: host-1
+user: user1
+events:
+  - time_offset: 0
+    tactic: initial-access
+    technique_id: T1566
+    technique_name: Phishing
+    command: "User opened an email attachment: invoice.docm (simulated)"
+    metadata:
+      mail_subject: "Invoice #2025"
+      file_hash: "SIMULATED"
+  - time_offset: 5
+    tactic: execution
+    technique_id: T1204
+    technique_name: User Execution
+    command: "User enabled macros (simulated)"
+  - time_offset: 10
+    tactic: discovery
+    technique_id: T1082
+    technique_name: System Information Discovery
+    command: "powershell.exe -c Get-ComputerInfo (simulated)"

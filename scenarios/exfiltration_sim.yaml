@@ -1,0 +1,16 @@
+id: SC-EXFIL-001
+name: Exfiltration (Simulated)
+description: Simulação de preparação de dados e *exfiltration* fictícia (apenas escrita em log).
+host: host-4
+user: user4
+events:
+  - time_offset: 0
+    tactic: collection
+    technique_id: T1119
+    technique_name: Automated Collection
+    command: "Zipped documents to C:\\Temp\\bundle.zip (simulated)"
+  - time_offset: 10
+    tactic: exfiltration
+    technique_id: T1048
+    technique_name: Exfiltration Over Alternative Protocol
+    command: "Uploaded bundle.zip to example.com/upload (simulated)"

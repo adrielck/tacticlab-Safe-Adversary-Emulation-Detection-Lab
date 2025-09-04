@@ -1,0 +1,10 @@
+title: Registry Run Keys Startup (Simulated)
+id: R-PERSIST-001
+severity: medium
+tactic: persistence
+technique_id: T1060
+technique_name: Registry Run Keys/Startup Folder
+match:
+  contains:
+    - field: command
+      value: Run Key

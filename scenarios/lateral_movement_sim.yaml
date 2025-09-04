@@ -1,0 +1,16 @@
+id: SC-LATERAL-001
+name: Lateral Movement (Simulated)
+description: Simulação de enumeração de rede e tentativa de movimento lateral (sem execução real).
+host: host-3
+user: user3
+events:
+  - time_offset: 0
+    tactic: discovery
+    technique_id: T1046
+    technique_name: Network Service Discovery
+    command: "net view /domain (simulated)"
+  - time_offset: 6
+    tactic: lateral-movement
+    technique_id: T1021
+    technique_name: Remote Services
+    command: "Attempted remote service connection to HOST-A (simulated)"

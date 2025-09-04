@@ -1,0 +1,10 @@
+title: Suspicious PowerShell Discovery (Simulated)
+id: R-DISC-001
+severity: low
+tactic: discovery
+technique_id: T1082
+technique_name: System Information Discovery
+match:
+  contains:
+    - field: command
+      value: powershell.exe
